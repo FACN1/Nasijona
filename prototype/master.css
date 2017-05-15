@@ -1,6 +1,6 @@
 /* RESET */
 
-body, header, footer, h1, button, div, img, a {
+body, header, footer, h1, button, div, img, a, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,7 +10,7 @@ body, header, footer, h1, button, div, img, a {
 
 /* FLEX */
 
-section, header, footer, h1, div, button, a {
+section, header, footer, h1, div, button, a, input {
   display: flex;
   justify-content: center;
   align-items: center;
