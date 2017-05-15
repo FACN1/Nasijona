@@ -49,6 +49,11 @@ body {
   color: #f7786b;
 }
 
+.page-content {
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+}
+
 /* FONTS */
 
 @font-face {
