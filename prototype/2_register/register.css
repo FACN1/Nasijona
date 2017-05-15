@@ -37,7 +37,7 @@ label:not(:last-child) {
 
 .submit-button {
   padding: 8px 10px;
-  margin-top: 30px;
+  margin-top: 25px;
   border-radius: 3px;
   font: bold 25px Gidole;
   color: #f7786b;
