@@ -1,14 +1,16 @@
+/* main view the user sees when arriving on the website */
 .landing-section {
-  position: relative;
+  position: relative; /* required because of children with 'position: absolute' */
   justify-content: flex-start;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  flex-direction: column; /* flex puts everything in a row by default - this overrides it */
+  height: 100vh; /* vh = view height - the height of the screen */
+  width: 100vw; /* vw = view width */
+  overflow: hidden; /* required to stop the angled slash thing making the page scroll */
 }
 
+/* decorative slash behind header stuff */
 .slash {
-  position: absolute;
+  position: absolute; /* this allows you to position it behind the other stuff */
   top: -5vw;
   left: -5vw;
   height: 95px;
@@ -20,12 +22,9 @@
 
 .header-bar {
   z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
   padding: 5px;
-  justify-content: space-between;
+  justify-content: space-between; /* pushes the title and buttons to the edges */
 }
 
 .header-text {
@@ -34,11 +33,13 @@
   margin-left: 10px;
 }
 
+/* div to contain the sign in and register buttons */
 .login-button-wrap {
   flex-direction: column;
 }
 
-.top-button {
+/* sign in and register buttons */
+.account-button {
   z-index: 1;
   width: 80px;
   padding: 5px 10px 3px 10px;
@@ -48,18 +49,19 @@
   background-color: white;
 }
 
-.top-button:first-child {
+/* only applies to .account-butto elements that are the first child of their parent */
+.account-button:first-child {
   margin-bottom: 5px;
 }
 
 /* FEATURED */
 
 .feat-wrap {
-  flex-grow: 1;
+  flex-grow: 1; /* makes this section expand to fill any empty space */
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* positions the 'Latest Items' title to the left */
   width: 100vw;
-  padding: 100px 10px 0px 10px;
+  padding: 30px 10px 0px 10px;
 }
 
 .feat-title {
@@ -69,8 +71,7 @@
 }
 
 .feat-product {
-  justify-content: space-between;
-  overflow: hidden;
+  overflow: hidden; /* stops the image's square corners overriding the curved corners of this div */
   height: 80px;
   width: 100%;
   border-radius: 4px;
@@ -78,6 +79,7 @@
   box-shadow: 0 3px 2px -2px #222;
 }
 
+/* swap pic and text for every product box that is at an even position in its parent's children */
 .feat-product:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -86,6 +88,7 @@
   margin: 0 0 0 5px;
 }
 
+/* add a margin to the bottom of every product box that is not the last child of its parent */
 .feat-product:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -94,7 +97,7 @@
   height: 100%;
   width: 80px;
   margin-right: 5px;
-  object-fit: cover;
+  object-fit: cover; /* fit the image inside this img tag */
 }
 
 .product-info {

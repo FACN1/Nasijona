@@ -7,7 +7,7 @@ body, header, footer, h1, button, div, img, a {
   box-sizing: border-box;
 }
 
-/* FLEX */
+/* FLEX - add to all these elements because it's amazing at centring stuff */
 
 section, header, footer, h1, div, button, a {
   display: flex;
