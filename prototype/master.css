@@ -5,6 +5,7 @@ body, header, footer, h1, button, div, img, a {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* FLEX */
