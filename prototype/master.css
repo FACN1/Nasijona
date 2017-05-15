@@ -1,3 +1,56 @@
+/* RESET */
+
+body, header, footer, h1, button, div, img, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* FLEX */
+
+section, header, footer, h1, div, button, a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ELEMENT STYLING */
+
 body {
-  background-color: #f0f5f5;
+  background-color: #f7786b;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+  justify-content: space-between;
+  height: 60px;
+  width: 100vw;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 20px 0 #222;
+}
+
+.nav-burger {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: #f7786b;
+  font-size: 25px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px -1px #aaa;
+}
+
+.page-title {
+  font: 25px Gidole;
+  color: #f7786b;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: Gidole;
+  src: url('gidole.otf');
 }
