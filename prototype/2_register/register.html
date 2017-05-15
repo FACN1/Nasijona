@@ -9,10 +9,35 @@
     <link rel="stylesheet" href="./register.css">
   </head>
   <body>
+    <!-- nav bar -->
     <header class="nav-bar">
       <h1 class="page-title">Register</h1>
-      <a class="nav-burger fa fa-home" id="nav-button"></a>
+      <a class="nav-burger fa fa-home" id="nav-button" href="../1_landing/landing.html"></a>
     </header>
-    <script type="text/javascript" src="../index.js"></script>
+
+    <div class="page-content">
+      <!-- registration form -->
+      <form class="registration-form">
+        <div class="form-input-wrap">
+          <label>Name
+            <input class="input-field" type="text" name="name" autocomplete="off" required />
+          </label>
+
+          <label>Email Address
+            <input class="input-field" type="email" name="email" autocomplete="off" required />
+          </label>
+
+          <label>Password
+            <input class="input-field" type="password" name="password" autocomplete="off" required />
+          </label>
+
+          <label>Confirm Password
+            <input class="input-field" type="password" name="confirm" autocomplete="off" required />
+          </label>
+        </div>
+
+        <input class="submit-button" type="submit" value="SUBMIT" />
+      </form>
+    </div>
   </body>
 </html>

@@ -1,15 +1,16 @@
 /* RESET */
 
-body, header, footer, h1, button, div, img, a {
+body, header, footer, h1, button, div, img, a, form, input {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* FLEX */
 
-section, header, footer, h1, div, button, a {
+section, header, footer, h1, div, button, a, form, input {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +45,13 @@ body {
 }
 
 .page-title {
-  font: 25px Gidole;
+  font: bold 25px Gidole;
   color: #f7786b;
+}
+
+.page-content {
+  width: 100vw;
+  height: calc(100vh - 60px);
 }
 
 /* FONTS */

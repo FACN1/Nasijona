@@ -1,1 +1,55 @@
+.registration-form {
+  flex-direction: column;
+}
 
+.form-input-wrap {
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0px 20px 0 #444;
+}
+
+label {
+  color: #555;
+  font: bold 17px Gidole;
+  margin-bottom:
+}
+
+label:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: calc(100vw - 80px);
+  margin-top: 5px;
+  padding: 5px 0;
+  font: 17px Gidole;
+  color: #f7786b;
+  border-bottom: 2px solid #eee;
+  transition: 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #f7786b;
+}
+
+.submit-button {
+  height: 100px;
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 100%;
+  font: bold 23px Gidole;
+  color: white;
+  background-color: #f7786b;
+  border: 5px solid white;
+  box-shadow: 0 0px 20px 0 #444;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: Gidole;
+  src: url('../gidole.otf');
+}
