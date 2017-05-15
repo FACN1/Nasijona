@@ -49,9 +49,10 @@ body {
   color: #f7786b;
 }
 
+/* container for anything under the nav bar */
 .page-content {
   width: 100vw;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px); /* set height to exactly height of screen minus height of nav bar */
 }
 
 /* FONTS */
