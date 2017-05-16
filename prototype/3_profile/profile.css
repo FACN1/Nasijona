@@ -1,0 +1,57 @@
+.profile-picture {
+  height: 40vw;
+  width: 40vw;
+  border-radius: 100%;
+}
+
+.page-content {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+}
+
+.description {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font: 15px Gidole;
+  color: #555;
+}
+
+.block {
+  box-shadow: 0 3px 10px -2px #222;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.images {
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.images img{
+  height: calc((100vw - 90px) / 2);
+  width: calc((100vw - 90px) / 2);
+  object-fit: cover;
+  margin: 5px;
+}
+
+.add-product-button {
+  padding: 8px 10px;
+  border-radius: 3px;
+  font: bold 25px Gidole;
+  color: #f7786b;
+  background-color: white;
+  border: 2px solid white;
+  box-shadow: 0 3px 10px -2px #222;
+}
+
+@font-face {
+  font-family: Gidole;
+  src: url('../gidole.otf')
+}
