@@ -1,3 +1,22 @@
+/* RESET */
+
+body, header, footer, h1, button, div, img, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* FLEX - add to all these elements because it's amazing at centring stuff */
+
+section, header, footer, h1, div, button, a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ELEMENT STYLING */
+
 body {
-  background-color: #f0f5f5;
+  background-color: #f7786b;
 }
