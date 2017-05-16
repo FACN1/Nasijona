@@ -5,6 +5,7 @@ body, header, footer, h1, button, div, img, a {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* FLEX - add to all these elements because it's amazing at centring stuff */
@@ -19,4 +20,44 @@ section, header, footer, h1, div, button, a {
 
 body {
   background-color: #f7786b;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+  justify-content: space-between;
+  height: 60px;
+  width: 100vw;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 20px 0 #222;
+}
+
+.nav-burger {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: #f7786b;
+  font-size: 25px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px -1px #aaa;
+}
+
+.page-title {
+  font: bold 25px Gidole;
+  color: #f7786b;
+}
+
+/* container for anything under the nav bar */
+.page-content {
+  width: 100vw;
+  min-height: calc(100vh - 60px); /* set height to exactly height of screen minus height of nav bar */
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: Gidole;
+  src: url('gidole.otf');
 }
