@@ -5,11 +5,15 @@ document.getElementById('submit').addEventListener('click', function() {
   localStorage.productDescription = formInputs.description.value;
   localStorage.productCategory = formInputs.category.value;
   localStorage.productPrice = formInputs.price.value;
-  localStorage.productImage = formInputs.image.value;
+  localStorage.productImage = formInputs.image.value.slice(12);
 });
 
 // update image label when user uploads an image
 document.getElementById('image-input').addEventListener('change', function() {
   var fileName = document.getElementById('image-input').value.slice(12);
-  document.getElementById('image-label').textContent = fileName;
+  if (fileName) {
+    document.getElementById('image-label').textContent = fileName;
+  } else {
+    document.getElementById('image-label').textContent = 'Upload Image';
+  }
 });
