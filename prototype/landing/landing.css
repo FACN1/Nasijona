@@ -1,12 +1,4 @@
-/* main view the user sees when arriving on the website */
-.landing-section {
-  position: relative; /* required because of children with 'position: absolute' */
-  justify-content: flex-start;
-  flex-direction: column; /* flex puts everything in a row by default - this overrides it */
-  height: 100vh; /* vh = view height - the height of the screen */
-  width: 100vw; /* vw = view width */
-  overflow: hidden; /* required to stop the angled slash thing making the page scroll */
-}
+/* HEADER BAR */
 
 /* decorative slash behind header stuff */
 .slash {
@@ -21,13 +13,14 @@
 }
 
 .header-bar {
-  z-index: 1;
   width: 100vw;
   padding: 5px;
   justify-content: space-between; /* pushes the title and buttons to the edges */
+  margin-bottom: 50px;
 }
 
 .header-text {
+  z-index: 1;
   font: bold 40px Gidole;
   color: #f7786b;
   margin-left: 10px;
@@ -54,17 +47,42 @@
   margin-bottom: 5px;
 }
 
-/* FEATURED */
+/* LANDING SECTION */
+
+.section-landing {
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  height: 40px;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font: 17px Gidole;
+  box-shadow: 0 3px 10px -2px #222;
+}
+
+/* FEATURED PRODUCTS SECTION */
+
+/* main view the user sees when arriving on the website */
+.section-featured {
+  position: relative; /* required because of children with 'position: absolute' */
+  flex-direction: column; /* flex puts everything in a row by default - this overrides it */
+  width: 100vw; /* vw = view width */
+  padding: 10px;
+  overflow: hidden; /* required to stop the angled slash thing making the page scroll */
+}
 
 .feat-wrap {
-  flex-grow: 1; /* makes this section expand to fill any empty space */
   flex-direction: column;
   align-items: flex-start; /* positions the 'Latest Items' title to the left */
-  width: 100vw;
-  padding: 30px 10px 0px 10px;
+  width: 100%;
 }
 
 .feat-title {
+  width: 100%;
   margin-bottom: 5px;
   font: 15px Gidole;
   color: white;
@@ -108,7 +126,7 @@
 .browse-button {
   height: 30px;
   padding: 5px 12px;
-  margin-bottom: 20px;
+  margin: 20px 0 10px 0;
   color: white;
   font: 17px Gidole;
   border: 1px solid white;
