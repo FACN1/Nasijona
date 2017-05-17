@@ -1,6 +1,6 @@
 /* RESET */
 
-body, header, footer, h1, button, div, img, a, form, input, p, span {
+body, header, footer, h1, button, div, img, a, form, input, p, span, select {
   margin: 0;
   padding: 0;
   border: 0;
