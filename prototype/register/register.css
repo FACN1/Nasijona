@@ -1,8 +1,14 @@
+.page-content {
+  padding: 30px;
+}
+
 .registration-form {
   flex-direction: column;
+  width: 100%;
 }
 
 .form-input-wrap {
+  width: 100%;
   flex-direction: column;
   border-radius: 5px;
   padding: 10px;
@@ -11,6 +17,7 @@
 }
 
 label {
+  width: 100%;
   color: #555;
   font: bold 17px Gidole;
 }
@@ -20,7 +27,7 @@ label:not(:last-child) {
 }
 
 .input-field {
-  width: calc(100vw - 80px);
+  width: 100%;
   margin-top: 5px;
   padding: 5px 0;
   font: 17px Gidole;
