@@ -11,27 +11,29 @@
   <body>
     <!-- nav bar -->
     <header class="nav-bar">
-      <h1 class="page-title">Create Profile</h1>
+      <h1 class="page-title">Create Seller Profile</h1>
       <a class="nav-button fa fa-home" id="nav-button" href="../landing/landing.html"></a>
     </header>
 
     <div class="page-content">
-      <form class="profile-form">
+      <form class="profile-form" id="form" action="../view_profile/profile.html">
         <div class="form-input-wrap">
-          <label>Shop Name
-            <input class="input-field" type="text" name="title" autocomplete="off" />
+          <label>Name
+            <input class="input-field" type="text" name="title" autocomplete="off" required />
           </label>
 
           <label>About You
-            <input class="input-field" type="text" name="title" autocomplete="off" />
+            <input class="input-field" type="text" name="about" autocomplete="off" required />
           </label>
 
           <input type="file" class="image-input" name="image" id="image-input" />
-          <label for="image-input" class="image-label" id="image-label">Upload Image</label>
+          <label for="image-input" class="image-label" id="image-label">Upload Profile Pic</label>
         </div>
 
-        <input class="submit-button" type="submit" value="SUBMIT" />
+        <input class="submit-button" id="submit" type="submit" value="SUBMIT" />
       </form>
     </div>
+
+    <script type="text/javascript" src="./create_profile.js"></script>
   </body>
 </html>
