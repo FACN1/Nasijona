@@ -16,7 +16,41 @@
     </header>
 
     <div class="page-content">
+      <!-- add product form -->
+      <form class="product-form" id="product-form" action="../5_view_product/view_product.html">
 
+        <div class="form-input-wrap">
+          <label>Title
+            <input class="input-field" type="text" name="title" autocomplete="off" required />
+          </label>
+
+          <label>Description
+            <input class="input-field" type="text" name="description" autocomplete="off" required />
+          </label>
+
+          <label>Category
+            <select class="input-field" name="category" required>
+              <option value="">Please Select</option>
+              <option value="jewellery">Jewellery</option>
+              <option value="crochet">Crochet</option>
+              <option value="calligraphy">Calligraphy</option>
+              <option value="embroidery">Embroidery</option>
+              <option value="metalworking">Metalworking</option>
+            </select>
+          </label>
+
+          <label>Price
+            <input class="input-field" type="number" name="price" required />
+          </label>
+
+          <input type="file" class="image-input" name="image" id="image-input" />
+          <label for="image-input" class="image-label" id="image-label">Upload Image</label>
+        </div>
+
+        <input class="submit-button" id="submit" type="submit" value="SUBMIT" />
+      </form>
     </div>
+
+    <script type="text/javascript" src="./add_product.js"></script>
   </body>
 </html>
