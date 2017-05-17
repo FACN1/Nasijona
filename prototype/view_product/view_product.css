@@ -1,4 +1,5 @@
 .view-product-section {
+  width: 100%;
   flex-direction: column;
   padding: 20px;
 }
