@@ -4,10 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../master.css">
     <link rel="stylesheet" href="./view_product.css">
   </head>
   <body>
-    <h1>View Product Page</h1>
+
+    <header class="nav-bar">
+      <h1 class="page-title" id="page-title">Blue Bracelet</h1>
+      <a class="nav-button fa fa-home" id="nav-button" href="../landing/landing.html"></a>
+    </header>
+
+      <div class="page-content">
+        <section class="view-product-section">
+          <!-- category and price -->
+          <div class="block panel product-info">
+            <span class="category" id="category">Jewellery</span>
+            <span class="price" id="price">$50</span>
+          </div>
+
+          <!-- product image -->
+          <img class="block product-image" src="../view_profile/product_2.png" alt="Product Image" id="product-image">
+
+          <!-- product description -->
+          <p class="block panel description" id="description">This is a description of the blue and silver bracelet. It is hand and Nazareth made.</p>
+
+          <!-- purchase -->
+          <a class="purchase-button">ADD TO CART</a>
+        </section>
+      </div>
+      <script type="text/javascript" src="view_product.js"></script>
   </body>
 </html>

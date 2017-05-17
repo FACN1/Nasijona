@@ -1,6 +1,6 @@
 /* RESET */
 
-body, header, footer, h1, button, div, img, a, form, input, p, section, select {
+body, header, footer, h1, button, div, img, a, form, input, p, span, select, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,7 +10,7 @@ body, header, footer, h1, button, div, img, a, form, input, p, section, select {
 
 /* FLEX - add to all these elements because it's amazing at centring stuff */
 
-section, header, footer, h1, div, button, a, form, input {
+section, header, footer, h1, div, button, a, form, input, span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +57,7 @@ body {
 .page-content {
   width: 100vw;
   min-height: calc(100vh - 60px); /* set height to exactly height of screen minus height of nav bar */
+  flex-direction: column;
 }
 
 /* FONTS */
