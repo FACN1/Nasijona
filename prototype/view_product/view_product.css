@@ -1,15 +1,15 @@
-h1 {
-  color: red;
+.page-content {
+  justify-content: flex-start;
 }
 
 .product-image {
-height: 50vw;
-width: 50vw;
-border-radius: 100%;
-border: 2px solid white;
+  height: 50vw;
+  width: 50vw;
+  border-radius: 100%;
+  border: 5px solid white;
 }
 
-.description, .product-name, .nazmade, .price, .category {
+.description, .product-name, .price, .category {
   width: 100%;
   background-color: white;
   padding: 10px;
@@ -23,19 +23,23 @@ border: 2px solid white;
 }
 
 .block:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.product-name {
-  width: 100%;
-  margin-bottom: 5px;
-  font: 15px Gidole;
-  color: #555;
+  margin-bottom: 15px;
 }
 
 .view-product-section {
   flex-direction: column;
   padding: 20px;
+}
+
+.purchase-button {
+  padding: 8px 10px;
+  margin-top: 20px;
+  border-radius: 3px;
+  font: bold 20px Gidole;
+  color: #f7786b;
+  background-color: white;
+  border: 2px solid white;
+  box-shadow: 0 3px 10px -2px #222;
 }
 
 @font-face {

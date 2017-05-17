@@ -57,6 +57,7 @@ body {
 .page-content {
   width: 100vw;
   min-height: calc(100vh - 60px); /* set height to exactly height of screen minus height of nav bar */
+  flex-direction: column;
 }
 
 /* FONTS */
