@@ -10,23 +10,35 @@
   </head>
   <body>
     <header class="nav-bar">
-      <h1 class="page-title">Man Food</h1>
-      <a class="nav-burger fa fa-home" id="nav-button" href="../1_landing/landing.html"></a>
+      <h1 class="page-title">Nazareth Jewellery</h1>
+      <div class="nav-button-wrap">
+        <a class="nav-button fa fa-plus" id="nav-button" href="../4_add_product/add_product.html"></a>
+        <a class="nav-button fa fa-home" id="nav-button" href="../1_landing/landing.html"></a>
+      </div>
     </header>
     <div class="page-content">
-      <img class="profile-picture block" src="./profile.png" alt="Profile Picture">
-      <p class="description block">This is a description of some shop. Abu Ahamd has been cooking amazing roadside food for 50 years. He specializes in Manaqeesh and Nutella.</p>
+      <!-- profile picture -->
+      <img class="profile-picture block" src="./profile_pic.png" alt="Profile Picture">
+
+      <!-- description -->
+      <span class="block-title">ABOUT ME</span>
+      <p class="description block">Hi! My name is Reem. I've been making custom handmade jewellery for the past 20 years. It's a tradition that's existed in my family for decades, and one that I want to pass on to the next generation. Please enjoy browsing my shop!</p>
+
+      <!-- image gallery -->
+      <span class="block-title">MY PRODUCTS</span>
       <div class="images block">
         <div>
-          <img src="./food_3.jpg" alt="">
-          <img src="./food_3.jpg" alt="">
+          <a style="background-image: url('./product_1.jpg')"></a>
+          <a style="background-image: url('./product_2.png')"></a>
         </div>
         <div>
-          <img src="./food_3.jpg" alt="">
-          <img src="./food_3.jpg" alt="">
+          <a style="background-image: url('./product_2.png')"></a>
+          <a style="background-image: url('./product_1.jpg')"></a>
         </div>
       </div>
-      <a href="../4_add_product/add_product.html" class="add-product-button block">ADD PRODUCT</a>
+
+      <!-- add product button -->
+      <!-- <a href="../4_add_product/add_product.html" class="add-product-button block">ADD PRODUCT</a> -->
     </div>
     <script type="text/javascript" src="./profile.js"></script>
   </body>
