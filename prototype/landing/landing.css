@@ -113,6 +113,7 @@
 
 .feat-title {
   width: 100%;
+  justify-content: flex-start;
   margin-bottom: 5px;
   font: 15px Gidole;
   color: white;
