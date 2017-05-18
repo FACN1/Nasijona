@@ -11,6 +11,7 @@
 }
 
 .submit-button {
+  -webkit-appearance: none;
   padding: 8px 10px;
   margin-top: 25px;
   border-radius: 3px;
