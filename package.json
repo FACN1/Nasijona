@@ -2,10 +2,11 @@
   "name": "nasijona",
   "version": "1.0.0",
   "description": "A platform for Nazarene artisans to promote and sell their crafts.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/start.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run sass && node src/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "./node_modules/.bin/node-sass --source-map true ./public/style/sass/main.scss ./public/style/style.css"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "homepage": "https://github.com/FACN1/Nasijona#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.26",
+    "node-sass": "^4.5.3"
   }
 }
