@@ -1,0 +1,24 @@
+{
+  "name": "nasijona",
+  "version": "1.0.0",
+  "description": "A platform for Nazarene artisans to promote and sell their crafts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/Nasijona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/Nasijona/issues"
+  },
+  "homepage": "https://github.com/FACN1/Nasijona#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0"
+  }
+}
