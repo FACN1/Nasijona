@@ -1,0 +1,5 @@
+prototype
+node_modules
+/public/style/style.css
+/public/style/style.css.map
+config.env
