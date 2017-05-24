@@ -1,0 +1,56 @@
+.landing-header {
+  @include flex;
+  height: 12rem;
+  width: 100vw;
+  padding: .5rem;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+}
+
+.login-button-wrap {
+  @include flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.slash {
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  background-color: white;
+  height: 9.5rem;
+  width: 110vw;
+  transform: rotate(3deg);
+  box-shadow: 0 0 4rem .1rem #222;
+}
+
+.header-text {
+  z-index: 1;
+  font: bold 4rem Gidole;
+  color: $main;
+  margin-left: .5rem;
+}
+
+.account-button {
+  @include flex;
+  width: 8rem;
+  color: $main;
+  font: 1.4rem Gidole;
+  border: .1rem solid $main;
+  padding: .5rem 0 .4rem 0;
+
+  &:first-child {
+    margin-bottom: .5rem;
+  }
+}
+
+.logo {
+  height: 17rem;
+}
+
+.landing-section {
+  @include flex;
+  width: 100vw;
+}
