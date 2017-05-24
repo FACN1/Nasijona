@@ -52,5 +52,6 @@
 
 .landing-section {
   @include flex;
+  height: calc(100vh - 14rem);
   width: 100vw;
 }
