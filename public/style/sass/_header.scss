@@ -6,29 +6,29 @@
   justify-content: space-between;
   height: $header-height;
   width: 100vw;
-  padding: 10px;
+  padding: 1rem;
   background-color: white;
-  box-shadow: 0 0 20px 0 #222;
+  box-shadow: 0 0 2rem 0 #222;
 }
 
 .page-title {
-  font: bold 25px Gidole;
+  font: bold 2.5rem Gidole;
   color: $main;
 }
 
 .nav-button {
   @include flex;
-  height: calc(#{$header-height} - 20px);
-  width: calc(#{$header-height} - 20px);
+  height: calc(#{$header-height} - 2rem);
+  width: calc(#{$header-height} - 2rem);
   color: white;
   background-color: $main;
-  font-size: 25px;
-  border-radius: 2px;
-  box-shadow: 0px 2px 3px -1px #aaa;
+  font-size: 2.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.3rem -0.1rem #aaa;
 }
 
 .nav-button:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .page-content {
