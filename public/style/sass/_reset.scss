@@ -1,0 +1,18 @@
+body, header, h1, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}

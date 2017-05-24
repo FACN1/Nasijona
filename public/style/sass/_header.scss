@@ -1,0 +1,41 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flex;
+  justify-content: space-between;
+  height: $header-height;
+  width: 100vw;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0 2rem 0 #222;
+}
+
+.page-title {
+  font: bold 2.5rem Gidole;
+  color: $main;
+}
+
+.nav-button {
+  @include flex;
+  height: calc(#{$header-height} - 2rem);
+  width: calc(#{$header-height} - 2rem);
+  color: white;
+  background-color: $main;
+  font-size: 2.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.3rem -0.1rem #aaa;
+}
+
+.nav-button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.page-content {
+  @include flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$header-height});
+  width: 100vw;
+  margin-top: $header-height;
+  background-color: $main;
+}
