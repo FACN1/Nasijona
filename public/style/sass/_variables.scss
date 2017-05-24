@@ -1,0 +1,18 @@
+// COLOURS
+$main: #f7786b;
+
+// SIZING
+$header-height: 60px;
+
+// MIXINS
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// FONTS
+@font-face {
+  font-family: Gidole;
+  src: url('../../fonts/gidole.otf');
+}

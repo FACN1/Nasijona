@@ -1,0 +1,36 @@
+.page-header {
+  @include flex;
+  justify-content: space-between;
+  height: $header-height;
+  width: 100vw;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 20px 0 #222;
+}
+
+.page-title {
+  font: bold 25px Gidole;
+  color: $main;
+}
+
+.nav-button {
+  @include flex;
+  height: calc(#{$header-height} - 20px);
+  width: calc(#{$header-height} - 20px);
+  color: white;
+  background-color: $main;
+  font-size: 25px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px -1px #aaa;
+}
+
+.nav-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.page-content {
+  @include flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$header-height});
+  width: 100vw;
+}
