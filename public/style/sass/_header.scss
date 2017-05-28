@@ -1,7 +1,4 @@
 .page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
   @include flex;
   justify-content: space-between;
   height: $header-height;
@@ -36,6 +33,4 @@
   flex-direction: column;
   min-height: calc(100vh - #{$header-height});
   width: 100vw;
-  margin-top: $header-height;
-  background-color: $main;
 }
