@@ -1,5 +1,26 @@
 {{>header}}
 
 <div class="page-content">
-  <h1>Register Page</h1>
+  <form class="registration-form" id="form" action="index.html" method="post">
+    <div class="form-input-wrap">
+
+      <label >Name
+        <input class="input-field" type="text" name="name" autocomplete="off" required>
+      </label>
+
+      <label>Email Address
+        <input class="input-field" type="text" name="email" autocomplete="off" required>
+      </label>
+
+      <label>Password
+        <input class="input-field" type="text" name="password" autocomplete="off" required>
+      </label>
+
+      <label>Confirm Password
+        <input class="input-field" type="text" name="confirm" autocomplete="off" required>
+      </label>
+
+      <input class="submit-button" id="submit "type="submit" value="SUBMIT">
+    </div>
+  </form>
 </div>
