@@ -1,0 +1,50 @@
+.registration-form {
+  @include flex;
+  flex-direction: column;
+
+  input[type="submit"] {
+    -webkit-appearance: none;
+    margin-top: 2.5rem;
+    padding: .8rem 1rem;
+    border-radius: .3rem;
+    font: bold 2.5rem Gidole;
+    color: $main;
+    background-color: white;
+    box-shadow: 0 .3rem 1rem -.2rem #222;
+  }
+}
+
+.form-input-wrap {
+  @include  flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 .3rem 1rem -.2rem #222;
+
+  label {
+    width: 100%;
+    color: #555;
+    font: bold 1.7rem Gidole;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  input {
+    width: 100%;
+    margin-top: .5rem;
+    padding: .5rem 0;
+    color: $main;
+    border-bottom: .2rem solid #eee;
+    transition: .2s;
+    font: 1.7rem Gidole;
+
+    &:focus {
+      outline: none;
+      border-color: $main;
+    }
+  }
+}
