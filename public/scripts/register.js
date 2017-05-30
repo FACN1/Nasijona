@@ -13,20 +13,20 @@
       // check inputs aren't empty
       for (var key in data) {
         if (!data[key].trim()) {
-          console.log('Missing form data:', key);
+          indexModule.showMessage('Missing information: ' + key);
           return false;
         }
       }
 
       // check email contains @
       if (!/@/.test(data.email) || data.email[data.email.length - 1] === '@') {
-        console.log('Email address is invalid');
+        indexModule.showMessage('Email address is invalid');
         return false;
       }
 
       // check both passwords match
       if (data.password !== data.confirm) {
-        console.log('Passwords don\'t match');
+        indexModule.showMessage('Passwords don\'t match');
         return false;
       }
 

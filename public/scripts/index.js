@@ -15,7 +15,19 @@ var indexModule = (function() {
     }
   }
 
+  var showMessage = function(msg) {
+    var msgBox = document.getElementById('msg-box');
+    msgBox.innerHTML = msg;
+    msgBox.classList.add('show-msg');
+
+    setTimeout(function() {
+      msgBox.innerHTML = '';
+      msgBox.classList.remove('show-msg');
+    }, 1500);
+  }
+
   return {
-    makeRequest: makeRequest
+    makeRequest: makeRequest,
+    showMessage: showMessage
   }
 })();
