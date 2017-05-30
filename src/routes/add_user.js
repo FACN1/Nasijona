@@ -1,7 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-require('env2')('./config.env');
 
-module.exports = (req, res) => {
+module.exports = (req) => {
   MongoClient.connect(process.env.DATABASE_URL, (err, db) => {
     if (err) return console.log(err);
 
@@ -9,14 +8,9 @@ module.exports = (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password
-    }, (error, result) => {
+    }, (error) => {
       if (error) return console.log(error);
-      console.log(result);
       return db.close();
     });
-  });
-
-  res.render('register', {
-    title: 'Register'
   });
 };

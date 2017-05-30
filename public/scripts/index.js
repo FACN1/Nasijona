@@ -8,8 +8,9 @@ var indexModule = (function() {
     }
     xhr.open(method, url);
 
-    if (method === 'POST' || method === 'PUT') {
-      xhr.send(data);
+    if (method === 'POST') {
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify(data));
     } else {
       xhr.send();
     }
