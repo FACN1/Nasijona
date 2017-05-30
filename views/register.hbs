@@ -1,24 +1,26 @@
 {{>header}}
 
 <div class="page-content">
-  <form class="registration-form" id="form" action="/add-user" method="post">
+  <form class="registration-form" id="register-form">
     <div class="form-input-wrap">
       <label>Name
-        <input type="text" name="name" autocomplete="off" required>
+        <input type="text" name="name" autocomplete="off">
       </label>
 
       <label>Email Address
-        <input type="text" name="email" autocomplete="off" required>
+        <input type="text" name="email" autocomplete="off">
       </label>
 
       <label>Password
-        <input type="password" name="password" autocomplete="off" required>
+        <input type="password" name="password" autocomplete="off">
       </label>
 
       <label>Confirm Password
-        <input type="password" name="confirm" autocomplete="off" required>
+        <input type="password" name="confirm" autocomplete="off">
       </label>
     </div>
     <input id="submit" type="submit" value="SUBMIT">
   </form>
 </div>
+
+<script type="text/javascript" src="./scripts/register.js"></script>
