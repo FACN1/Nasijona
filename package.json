@@ -27,9 +27,7 @@
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "mongodb": "^2.2.26",
-    "node-sass": "^4.5.3",
-    "passport": "^0.3.2",
-    "passport-facebook": "^2.1.1"
+    "node-sass": "^4.5.3"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
