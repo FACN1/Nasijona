@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = (req, res) => {
   MongoClient.connect(process.env.DATABASE_URL, (err, db) => {
-    if (err) return console.log(err);
+    if (err) return res.status(500).send('Database error. Please try again.');
 
     const data = {
       name: req.body.name,
@@ -13,7 +13,7 @@ module.exports = (req, res) => {
     };
 
     return dbQueries.addUser(db, data, (error) => {
-      if (error) return console.log(error);
+      if (!error) return res.status(500).send('Database error. Please try again.');
       db.close();
       return res.send('New user added to DB');
     });

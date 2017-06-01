@@ -12,7 +12,7 @@
     // send data to server if it passes validation
     if (validate(data)) {
       indexModule.makeRequest('/add-user', 'POST', data, function(err, res) {
-        if (err) return console.log(err);
+        if (err) return indexModule.showMessage(err);
         location.href = '/profile';
       });
     }
