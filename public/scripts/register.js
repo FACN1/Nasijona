@@ -27,8 +27,8 @@
       }
     }
 
-    // check email contains @
-    if (!/@/.test(data.email) || data.email[0] === '@' || data.email[data.email.length - 1] === '@') {
+    // check email address
+    if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(data.email)) {
       indexModule.showMessage('Email address is invalid');
       return false;
     }
