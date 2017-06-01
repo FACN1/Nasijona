@@ -13,7 +13,7 @@ module.exports = (req, res) => {
     };
 
     return dbQueries.addUser(db, data, (error) => {
-      if (!error) return res.status(500).send('Database error. Please try again.');
+      if (error) return res.status(500).send('Database error. Please try again.');
       db.close();
       return res.send('New user added to DB');
     });
