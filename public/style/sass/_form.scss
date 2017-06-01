@@ -2,7 +2,7 @@
   @include flex;
   flex-direction: column;
 
-  input[type="submit"] {
+  input[type=submit] {
     -webkit-appearance: none;
     margin-top: 2.5rem;
     padding: .8rem 1rem;
@@ -33,7 +33,7 @@
     }
   }
 
-  input {
+  input, textarea {
     width: 100%;
     margin-top: .5rem;
     padding: .5rem 0;
@@ -46,5 +46,21 @@
       outline: none;
       border-color: $main;
     }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .form-button {
+    @include flex;
+    height: 5rem;
+    margin: 0;
+    border-radius: 3px;
+    background-color: #eee;
+  }
+
+  .image-input {
+    display: none;
   }
 }
