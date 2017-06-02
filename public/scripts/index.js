@@ -1,4 +1,4 @@
-var indexModule = (function() {
+var Nasijona = (function() {
   var makeRequest = function(url, method, data, callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -31,8 +31,35 @@ var indexModule = (function() {
     }, 1500);
   }
 
+  var validate = function(origin, data) {
+    // check inputs aren't empty
+    for (var key in data) {
+      if (!data[key].trim()) {
+        Nasijona.showMessage('Missing information: ' + key);
+        return false;
+      }
+    }
+
+    if (origin === 'register') {
+      // check email address
+      if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(data.email)) {
+        Nasijona.showMessage('Email address is invalid');
+        return false;
+      }
+
+      // check both passwords match
+      if (data.password !== data.confirmation) {
+        Nasijona.showMessage('Passwords don\'t match');
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   return {
     makeRequest: makeRequest,
-    showMessage: showMessage
+    showMessage: showMessage,
+    validate: validate
   }
 })();

@@ -16,7 +16,7 @@
     var url = '/sign-s3?fname=' + fileName + '&ftype=' + file.type;
 
     // make request to server route /sign-s3
-    indexModule.makeRequest(url, 'GET', null, function(err, response) {
+    Nasijona.makeRequest(url, 'GET', null, function(err, response) {
       if (err) return console.log(err);
 
       // if successful, upload the file
@@ -27,7 +27,7 @@
 
   // upload the file to s3
   function uploadFile(file, signedRequest, dataUrl) {
-    indexModule.makeRequest(signedRequest, 'PUT', file, function(err, response) {
+    Nasijona.makeRequest(signedRequest, 'PUT', file, function(err, response) {
       if (err) return console.log(err);
 
       // adjust form view
