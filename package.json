@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/FACN1/Nasijona#readme",
   "dependencies": {
+    "aws-sdk": "^2.60.0",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
     "env2": "^2.2.0",

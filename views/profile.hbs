@@ -3,15 +3,19 @@
 <div class="page-content">
   <form class="registration-form" id="register-form" autocomplete="off">
     <div class="form-input-wrap">
+      <!-- about -->
       <label>About Me
-        <textarea name="about" rows="6"></textarea>
+        <textarea name="about" rows="4" maxlength="400"></textarea>
       </label>
-      <label class="form-button">Upload Image
-        <input type="file" accept="image/*" class="image-input">
+      <!-- profile pic -->
+      <div class="form-image fa fa-file-image-o" id="preview-image"></div>
+      <label class="form-button" id="image-label">Upload Profile Pic
+        <input type="file" accept="image/*" class="hidden" id="image-input">
+        <input type="hidden" id="image-url">
       </label>
     </div>
     <input id="submit" type="submit" value="SUBMIT">
   </form>
 </div>
 
-<!-- <script type="text/javascript" src="./scripts/profile.js"></script> -->
+<script type="text/javascript" src="./scripts/s3.js"></script>

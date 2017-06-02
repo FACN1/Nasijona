@@ -60,7 +60,19 @@
     background-color: #eee;
   }
 
-  .image-input {
+  .hidden {
     display: none;
   }
+}
+
+.form-image {
+  @include flex;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  background-color: #eee;
+  color: #aaa;
+  font-size: 3rem;
+  background-size: cover;
 }

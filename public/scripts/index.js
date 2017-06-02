@@ -13,6 +13,8 @@ var indexModule = (function() {
     if (method === 'POST') {
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify(data));
+    } else if (method === 'PUT') {
+      xhr.send(data);
     } else {
       xhr.send();
     }
