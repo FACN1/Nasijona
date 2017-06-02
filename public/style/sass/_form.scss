@@ -63,16 +63,28 @@
   .hidden {
     display: none;
   }
+
+  .form-image {
+    @include flex;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+    background-color: #eee;
+    color: #aaa;
+    font-size: 3rem;
+    background-size: cover;
+  }
 }
 
-.form-image {
-  @include flex;
-  width: 20rem;
-  height: 20rem;
-  margin-bottom: 1rem;
-  border-radius: 100%;
-  background-color: #eee;
+.textarea-label {
+  position: relative;
+}
+
+.char-count {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: #aaa;
-  font-size: 3rem;
-  background-size: cover;
+  font-size: 1.3rem;
 }

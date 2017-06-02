@@ -4,9 +4,11 @@
   <form class="registration-form" id="register-form" autocomplete="off">
     <div class="form-input-wrap">
       <!-- about -->
-      <label>About Me
-        <textarea name="about" rows="4" maxlength="400"></textarea>
+      <label class="textarea-label">About Me
+        <span class="char-count" id="char-count">300</span>
+        <textarea name="about" rows="4" maxlength="300" id="about-text"></textarea>
       </label>
+
       <!-- profile pic -->
       <div class="form-image fa fa-file-image-o" id="preview-image"></div>
       <label class="form-button" id="image-label">Upload Profile Pic
@@ -19,3 +21,4 @@
 </div>
 
 <script type="text/javascript" src="./scripts/s3.js"></script>
+<script type="text/javascript" src="./scripts/profile.js"></script>
