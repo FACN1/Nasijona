@@ -3,7 +3,7 @@
     e.preventDefault();
 
     var data = {
-      name: e.target.elements.name.value,
+      username: e.target.elements.username.value,
       email: e.target.elements.email.value,
       password: e.target.elements.password.value,
       confirmation: e.target.elements.confirm.value
