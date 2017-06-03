@@ -10,6 +10,16 @@ MongoClient.connect(process.env.DATABASE_URL, (err, db) => {
 
 const dbQueries = {};
 
+dbQueries.findUser = (data, callback) => {
+  mongoDB.collection('users').findOne({
+    $or: [{
+      username: data.username
+    }, {
+      email: data.email
+    }]
+  }, callback);
+};
+
 dbQueries.addUser = (data, callback) => {
   mongoDB.collection('users').insertOne(data, callback);
 };
