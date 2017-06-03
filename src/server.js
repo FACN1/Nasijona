@@ -1,8 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const hbs = require('express-handlebars');
-const router = require('./routes/router.js');
 const path = require('path');
+
+// middleware
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const router = require('./routes/router.js');
 
 const app = express();
 
@@ -16,6 +19,8 @@ app.set('view engine', 'hbs');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
+
 app.use(express.static('public'));
 app.use(router);
 
