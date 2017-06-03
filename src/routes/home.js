@@ -1,4 +1,7 @@
 module.exports = (req, res) => {
-  console.log(req.cookies);
-  res.render('home');
+  const text = req.cookies.token ? 'LOG OUT' : 'LOG IN';
+
+  res.render('home', {
+    loginStatus: text
+  });
 };
