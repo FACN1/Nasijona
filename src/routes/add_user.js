@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = (req, res) => {
   const data = {
-    name: req.body.name,
+    username: req.body.username,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 10)
   };

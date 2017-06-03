@@ -3,7 +3,7 @@
     e.preventDefault();
 
     var data = {
-      name: e.target.elements.name.value,
+      username: e.target.elements.username.value,
       email: e.target.elements.email.value,
       password: e.target.elements.password.value,
       confirmation: e.target.elements.confirm.value
@@ -25,6 +25,12 @@
         indexModule.showMessage('Missing information: ' + key);
         return false;
       }
+    }
+
+    // check username for spaces
+    if (/\s/.test(data.username)) {
+      indexModule.showMessage('Username can\'t contain spaces');
+      return false;
     }
 
     // check email address
