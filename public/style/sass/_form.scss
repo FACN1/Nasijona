@@ -1,8 +1,8 @@
-.registration-form {
+.form {
   @include flex;
   flex-direction: column;
 
-  input[type="submit"] {
+  input[type=submit] {
     -webkit-appearance: none;
     margin-top: 2.5rem;
     padding: .8rem 1rem;
