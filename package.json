@@ -25,9 +25,11 @@
     "aws-sdk": "^2.60.0",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
     "env2": "^2.2.0",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^7.4.1",
     "mongodb": "^2.2.26",
     "node-sass": "^4.5.3"
   },
