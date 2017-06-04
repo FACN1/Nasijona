@@ -23,12 +23,15 @@ module.exports = (req, res) => {
     }
 
     // if no matches, add user to DB
-    return dbQueries.addUser(data, (error) => {
+    return dbQueries.addUser(data, (error, result) => {
       if (error) return res.status(500).send('Database error.');
 
       // create and return JWT to log user in
       const token = jwt.sign(data, process.env.SECRET, { expiresIn: '1d' });
-      return res.send(token);
+      return res.json({
+        token,
+        user: result.ops[0].username
+      });
     });
   });
 };
