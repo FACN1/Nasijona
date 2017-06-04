@@ -12,11 +12,12 @@
     // send data to server if it passes validation
     if (Nasijona.validate('register', data)) {
       Nasijona.makeRequest('/add-user', 'POST', data, function(err, res) {
+        console.log(res);
         if (err) return Nasijona.showMessage(err);
 
         var result = JSON.parse(res);
         Nasijona.signIn(result.token);
-        location.href = '/profile?u=' + result.user;
+        location.href = '/create?u=' + result.user;
       });
     }
   });
