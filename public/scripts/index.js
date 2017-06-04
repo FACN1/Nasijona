@@ -63,9 +63,15 @@ var Nasijona = (function() {
     return true;
   }
 
+  var signIn = function(token) {
+    var expiry = new Date().getTime() + 1000 * 60 * 60 * 24 * 30; // 1 month expiry
+    document.cookie = 'token=' + token + '; expires=' + new Date(expiry).toString();
+  }
+
   return {
     makeRequest: makeRequest,
     showMessage: showMessage,
-    validate: validate
+    validate: validate,
+    signIn: signIn
   }
 })();

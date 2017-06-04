@@ -1,5 +1,6 @@
 const dbQueries = require('../db_queries.js');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 module.exports = (req, res) => {
   const data = {
@@ -24,7 +25,10 @@ module.exports = (req, res) => {
     // if no matches, add user to DB
     return dbQueries.addUser(data, (error) => {
       if (error) return res.status(500).send('Database error.');
-      return res.send('New user added to DB');
+
+      // create and return JWT to log user in
+      const token = jwt.sign(data, process.env.SECRET, { expiresIn: '1d' });
+      return res.send(token);
     });
   });
 };
