@@ -12,7 +12,6 @@
     // send data to server if it passes validation
     if (Nasijona.validate('register', data)) {
       Nasijona.makeRequest('/add-user', 'POST', data, function(err, res) {
-        console.log(res);
         if (err) return Nasijona.showMessage(err);
 
         var result = JSON.parse(res);
