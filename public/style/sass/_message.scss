@@ -1,0 +1,17 @@
+.msg-box {
+  @include flex;
+  position: fixed;
+  left: 1rem;
+  bottom: -$header-height;
+  height: $header-height;
+  width: calc(100vw - 2rem);
+  background-color: white;
+  border-radius: .3rem;
+  box-shadow: 0 .3rem 1rem -.2rem #222;
+  transition: 0.2s;
+  font: 1.5rem Gidole;
+}
+
+.show-msg {
+  bottom: 1rem;
+}
