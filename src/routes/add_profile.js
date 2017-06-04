@@ -12,7 +12,7 @@ module.exports = (req, res) => {
     image: req.body.image
   };
 
-  dbQueries.addProfile(data, (error, result) => {
+  return dbQueries.addProfile(data, (error, result) => {
     if (error) return res.status(500).send('Database error.');
     return console.log(result);
   });
