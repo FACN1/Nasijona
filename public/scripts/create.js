@@ -16,7 +16,7 @@
     if (Nasijona.validate('profile', data)) {
       Nasijona.makeRequest('/add-profile', 'POST', data, function(err, res) {
         if (err) return Nasijona.showMessage(err);
-        location.href = '/profile';
+        location.href = '/profile?u=' + res;
       });
     }
   });

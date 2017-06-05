@@ -16,7 +16,7 @@
 
         var result = JSON.parse(res);
         Nasijona.signIn(result.token);
-        location.href = '/create?u=' + result.user;
+        location.href = '/create';
       });
     }
   });

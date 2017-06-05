@@ -28,7 +28,6 @@ module.exports = (req, res) => {
 
       // create and return JWT to log user in
       const token = jwt.sign(data, process.env.SECRET, { expiresIn: '1d' });
-      console.log(token);
       return res.json({
         token,
         user: result.ops[0].username
