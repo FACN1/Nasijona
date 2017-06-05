@@ -1,0 +1,24 @@
+{{>header}}
+
+<div class="page-content">
+  <form class="form" id="profile-form" autocomplete="off">
+    <div class="form-input-wrap">
+      <!-- about -->
+      <label class="textarea-label">About Me
+        <span class="char-count" id="char-count">300</span>
+        <textarea name="about" rows="4" maxlength="300" id="about-text"></textarea>
+      </label>
+
+      <!-- profile pic -->
+      <div class="form-image fa fa-file-image-o" id="preview-image"></div>
+      <label class="form-button" id="image-label">Upload Profile Pic
+        <input type="file" accept="image/*" class="hidden" id="image-input">
+        <input type="hidden" name="imageUrl" id="image-url">
+      </label>
+    </div>
+    <input id="submit" type="submit" value="SUBMIT">
+  </form>
+</div>
+
+<script type="text/javascript" src="./scripts/s3.js"></script>
+<script type="text/javascript" src="./scripts/create.js"></script>

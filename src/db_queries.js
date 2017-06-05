@@ -24,4 +24,14 @@ dbQueries.addUser = (data, callback) => {
   mongoDB.collection('users').insertOne(data, callback);
 };
 
+dbQueries.addProfile = (data, callback) => {
+  mongoDB.collection('users').update(
+    { username: data.username },
+    { $set: {
+      about: data.about,
+      image: data.image
+    }
+    }, callback);
+};
+
 module.exports = dbQueries;

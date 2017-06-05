@@ -13,7 +13,10 @@
     if (Nasijona.validate('register', data)) {
       Nasijona.makeRequest('/add-user', 'POST', data, function(err, res) {
         if (err) return Nasijona.showMessage(err);
-        location.href = '/profile';
+
+        var result = JSON.parse(res);
+        Nasijona.signIn(result.token);
+        location.href = '/create?u=' + result.user;
       });
     }
   });

@@ -13,6 +13,8 @@ var Nasijona = (function() {
     if (method === 'POST') {
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify(data));
+    } else if (method === 'PUT') {
+      xhr.send(data);
     } else {
       xhr.send();
     }
@@ -33,7 +35,7 @@ var Nasijona = (function() {
     // check inputs aren't empty
     for (var key in data) {
       if (!data[key].trim()) {
-        Nasijona.showMessage('Missing information: ' + key);
+        Nasijona.showMessage('Missing information: ' + key + '.');
         return false;
       }
     }
@@ -41,19 +43,19 @@ var Nasijona = (function() {
     if (origin === 'register') {
       // check username for spaces
       if (/\s/.test(data.username)) {
-        Nasijona.showMessage('Username can\'t contain spaces');
+        Nasijona.showMessage('Username can\'t contain spaces.');
         return false;
       }
 
       // check email address
       if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(data.email)) {
-        Nasijona.showMessage('Email address is invalid');
+        Nasijona.showMessage('Email address is invalid.');
         return false;
       }
 
       // check both passwords match
       if (data.password !== data.confirmation) {
-        Nasijona.showMessage('Passwords don\'t match');
+        Nasijona.showMessage('Passwords don\'t match.');
         return false;
       }
     }
@@ -61,9 +63,15 @@ var Nasijona = (function() {
     return true;
   }
 
+  var signIn = function(token) {
+    var expiry = new Date().getTime() + 1000 * 60 * 60 * 24 * 30; // 1 month expiry
+    document.cookie = 'token=' + token + '; expires=' + new Date(expiry).toString();
+  }
+
   return {
     makeRequest: makeRequest,
     showMessage: showMessage,
-    validate: validate
+    validate: validate,
+    signIn: signIn
   }
 })();
