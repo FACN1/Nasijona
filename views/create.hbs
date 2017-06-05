@@ -3,13 +3,16 @@
 <div class="page-content">
   <form class="form" id="profile-form" autocomplete="off">
     <div class="form-input-wrap">
-      <!-- about -->
-      <label class="textarea-label">About Me
-        <span class="char-count" id="char-count">300</span>
-        <textarea name="about" rows="4" maxlength="300" id="about-text"></textarea>
+      <label class="shop-name-label">Shop Name
+        <span class="char-count" id="name-char-count">25</span>
+        <input type="text" name="shop" maxlength="25" id="name-text">
       </label>
 
-      <!-- profile pic -->
+      <label class="textarea-label">About Me
+        <span class="char-count" id="about-char-count">200</span>
+        <textarea name="about" rows="4" maxlength="200" id="about-text"></textarea>
+      </label>
+
       <div class="form-image fa fa-file-image-o" id="preview-image"></div>
       <label class="form-button" id="image-label">Upload Profile Pic
         <input type="file" accept="image/*" class="hidden" id="image-input">

@@ -8,6 +8,7 @@ module.exports = (req, res) => {
 
   const data = {
     username: jwt.decode(req.cookies.token).username,
+    shop: req.body.shop,
     about: req.body.about,
     image: req.body.image
   };
