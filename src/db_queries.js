@@ -35,4 +35,8 @@ dbQueries.addProfile = (data, callback) => {
     }, callback);
 };
 
+dbQueries.getProfile = (user, callback) => {
+  mongoDB.collection('users').findOne({ username: user }, callback);
+};
+
 module.exports = dbQueries;
