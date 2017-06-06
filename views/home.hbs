@@ -3,7 +3,9 @@
   <h1 class="header-text">NAZBAY</h1>
   <div class="login-button-wrap">
     <a class="account-button" id="login-button">{{loginStatus}}</a>
-    <a class="account-button" href="/register">REGISTER</a>
+    {{#unless loggedIn}}
+      <a class="account-button" href="/register">REGISTER</a>
+    {{/unless}}
   </div>
 </header>
 
