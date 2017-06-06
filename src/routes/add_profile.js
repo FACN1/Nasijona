@@ -8,12 +8,13 @@ module.exports = (req, res) => {
 
   const data = {
     username: jwt.decode(req.cookies.token).username,
+    shop: req.body.shop,
     about: req.body.about,
     image: req.body.image
   };
 
-  return dbQueries.addProfile(data, (error, result) => {
+  return dbQueries.addProfile(data, (error) => {
     if (error) return res.status(500).send('Database error.');
-    return console.log(result);
+    return res.send(data.username);
   });
 };

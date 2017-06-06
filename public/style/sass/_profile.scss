@@ -1,0 +1,35 @@
+.page-content.profile {
+  justify-content: flex-start;
+}
+
+.block-title {
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  font: 15px Gidole;
+  color: white;
+}
+
+.block {
+  box-shadow: 0 3px 10px -2px #222;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  height: 60vw;
+  width: 60vw;
+  border-radius: 100%;
+  border: 5px solid white;
+}
+
+.about {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font: 15px Gidole;
+  color: #555;
+}

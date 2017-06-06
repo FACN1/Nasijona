@@ -28,10 +28,15 @@ dbQueries.addProfile = (data, callback) => {
   mongoDB.collection('users').update(
     { username: data.username },
     { $set: {
+      shop: data.shop,
       about: data.about,
       image: data.image
     }
     }, callback);
+};
+
+dbQueries.getProfile = (user, callback) => {
+  mongoDB.collection('users').findOne({ username: user }, callback);
 };
 
 module.exports = dbQueries;
