@@ -13,6 +13,10 @@
   color: $main;
 }
 
+.nav-button-wrap {
+  @include flex;
+}
+
 .nav-button {
   @include flex;
   height: calc(#{$header-height} - 2rem);
