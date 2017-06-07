@@ -1,0 +1,34 @@
+{{>header}}
+
+<div class="page-content">
+  <form class="form" id="product-form" autocomplete="off">
+    <div class="form-input-wrap">
+      <label>Product Name
+        <input type="text" name="product">
+      </label>
+
+      <label>Category
+        <select class="input-field" name="category">
+          <option value="">Please Select</option>
+          <option value="Jewellery">Jewellery</option>
+          <option value="Crochet">Crochet</option>
+          <option value="Calligraphy">Calligraphy</option>
+          <option value="Embroidery">Embroidery</option>
+          <option value="Metalworking">Metalworking</option>
+        </select>
+      </label>
+
+      <label class="textarea-label">Description
+        <span class="char-count" id="about-char-count">100</span>
+        <textarea name="description" rows="3" maxlength="100" id="about-text"></textarea>
+      </label>
+
+      <label>Price
+        <input class="input-field" type="number" min="1" name="price" step="any">
+      </label>
+    </div>
+    <input id="submit" type="submit" value="SUBMIT">
+  </form>
+</div>
+
+<script type="text/javascript" src="./scripts/new_product.js"></script>
