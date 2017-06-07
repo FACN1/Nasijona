@@ -39,4 +39,17 @@ dbQueries.getProfile = (user, callback) => {
   mongoDB.collection('users').findOne({ username: user }, callback);
 };
 
+dbQueries.addProduct = (data, callback) => {
+  mongoDB.collection('users').update(
+    { username: data.username },
+    { $push: { products: {
+      product: data.product,
+      category: data.category,
+      description: data.description,
+      price: data.price,
+      image: data.image
+    } }
+    }, callback);
+};
+
 module.exports = dbQueries;
