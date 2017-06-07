@@ -20,7 +20,8 @@
     if (Nasijona.validate('product', data)) {
       Nasijona.makeRequest('/add-product', 'POST', data, function(err, res) {
         if (err) return Nasijona.showMessage(err);
-        console.log(res);
+        var serverData = JSON.parse(res);
+        location.href = '/product?u=' + serverData.username + '&p=' + serverData.product;
       });
     }
   });

@@ -13,6 +13,6 @@ module.exports = (req, res) => {
 
   return dbQueries.addProduct(data, (error) => {
     if (error) return res.status(500).send('Database error.');
-    return res.send('Success');
+    return res.send(data);
   });
 };
