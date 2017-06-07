@@ -11,8 +11,16 @@ module.exports = (req, res) => {
     image: req.body.image
   };
 
-  return dbQueries.addProduct(data, (error) => {
-    if (error) return res.status(500).send('Database error.');
-    return res.send(data);
+  // add to products collection
+  dbQueries.addProduct(data, (err, result) => {
+    if (err) return res.status(500).send('Database error.');
+
+    // add new product id to data
+    data.id = result.ops[0]._id;
+
+    return dbQueries.addUserProduct(data, (error) => {
+      if (error) return res.status(500).send('Database error.');
+      return res.send('Success');
+    });
   });
 };

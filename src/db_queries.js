@@ -40,9 +40,14 @@ dbQueries.getProfile = (user, callback) => {
 };
 
 dbQueries.addProduct = (data, callback) => {
+  mongoDB.collection('products').insertOne(data, callback);
+};
+
+dbQueries.addUserProduct = (data, callback) => {
   mongoDB.collection('users').update(
     { username: data.username },
     { $push: { products: {
+      id: data.id,
       product: data.product,
       category: data.category,
       description: data.description,
