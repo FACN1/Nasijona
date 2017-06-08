@@ -12,5 +12,6 @@ router.post('/add-profile', require('./add_profile.js'));
 router.get('/profile', require('./profile.js'));
 router.get('/new-product', require('./new_product.js'));
 router.post('/add-product', require('./add_product.js'));
+router.get('/product', require('./product.js'));
 
 module.exports = router;

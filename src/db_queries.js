@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectID;
 require('env2')('./config.env');
 
 let mongoDB;
@@ -55,6 +56,10 @@ dbQueries.addUserProduct = (data, callback) => {
       image: data.image
     } }
     }, callback);
+};
+
+dbQueries.getProduct = (id, callback) => {
+  mongoDB.collection('products').findOne({ _id: ObjectId(id) }, callback);
 };
 
 module.exports = dbQueries;
