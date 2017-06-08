@@ -18,9 +18,10 @@ module.exports = (req, res) => {
     // add new product id to data
     data.id = result.ops[0]._id;
 
+    // add to users collection as well
     return dbQueries.addUserProduct(data, (error) => {
       if (error) return res.status(500).send('Database error.');
-      return res.send('Success');
+      return res.send(data.id);
     });
   });
 };
