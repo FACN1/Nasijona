@@ -1,0 +1,44 @@
+.product-block {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+  font: 1.5rem Gidole;
+  color: #555;
+  box-shadow: 0 .3rem 1rem -.2rem #222;
+}
+
+.product-block:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.page-content.product {
+  justify-content: flex-start;
+}
+
+.product-image {
+  @include flex;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 100%;
+  background-color: #eee;
+  color: #aaa;
+  font-size: 3rem;
+  box-shadow: 0 .3rem 1rem -.2rem #222;
+  margin-bottom: 2rem;
+}
+
+.product-button {
+  -webkit-appearance: none;
+  padding: .8rem 1rem;
+  border-radius: .3rem;
+  font: bold 2.5rem Gidole;
+  color: $main;
+  background-color: white;
+  box-shadow: 0 .3rem 1rem -.2rem #222;
+}
+
+.centre {
+  text-align: center;
+  font-size: 2rem;
+}
