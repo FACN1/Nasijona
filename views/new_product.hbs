@@ -1,0 +1,41 @@
+{{>header}}
+
+<div class="page-content">
+  <form class="form" id="product-form" autocomplete="off">
+    <div class="form-input-wrap">
+      <label>Product Name
+        <input type="text" name="product">
+      </label>
+
+      <label>Category
+        <select class="input-field" name="category">
+          <option value="">Please Select</option>
+          <option value="Jewellery">Jewellery</option>
+          <option value="Crochet">Crochet</option>
+          <option value="Calligraphy">Calligraphy</option>
+          <option value="Embroidery">Embroidery</option>
+          <option value="Metalworking">Metalwork</option>
+        </select>
+      </label>
+
+      <label class="textarea-label">Description
+        <span class="char-count" id="desc-char-count">100</span>
+        <textarea name="description" rows="3" maxlength="100" id="desc-text"></textarea>
+      </label>
+
+      <label>Price
+        <input class="input-field" type="number" min="1" name="price" step="any">
+      </label>
+
+      <div class="form-image fa fa-file-image-o" id="preview-image"></div>
+      <label class="form-button" id="image-label">Upload Image
+        <input type="file" accept="image/*" class="hidden" id="image-input">
+        <input type="hidden" name="imageUrl" id="image-url">
+      </label>
+    </div>
+    <input id="submit" type="submit" value="SUBMIT">
+  </form>
+</div>
+
+<script type="text/javascript" src="./scripts/s3.js"></script>
+<script type="text/javascript" src="./scripts/new_product.js"></script>

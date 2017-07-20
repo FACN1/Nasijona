@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectID;
 require('env2')('./config.env');
 
 let mongoDB;
@@ -37,6 +38,28 @@ dbQueries.addProfile = (data, callback) => {
 
 dbQueries.getProfile = (user, callback) => {
   mongoDB.collection('users').findOne({ username: user }, callback);
+};
+
+dbQueries.addProduct = (data, callback) => {
+  mongoDB.collection('products').insertOne(data, callback);
+};
+
+dbQueries.addUserProduct = (data, callback) => {
+  mongoDB.collection('users').update(
+    { username: data.username },
+    { $push: { products: {
+      id: data.id,
+      product: data.product,
+      category: data.category,
+      description: data.description,
+      price: data.price,
+      image: data.image
+    } }
+    }, callback);
+};
+
+dbQueries.getProduct = (id, callback) => {
+  mongoDB.collection('products').findOne({ _id: ObjectId(id) }, callback);
 };
 
 module.exports = dbQueries;
